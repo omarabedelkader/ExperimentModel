@@ -63,14 +63,10 @@ AbstractExperiment >> newLogger [
 
 { #category : 'configuration' }
 AbstractExperiment >> removeERRecorderFromSettings [
-	EREventRecorderSettings class compile:'urlSettingsOn: aBuilder 
-
-	(aBuilder setting: #stringUrl)
-		parentName: #Tools;
-		target: self;
-		description: ''The default URL for the Event Recorder server.'';
-		label: ''Event Recorder URL address''
-'
+	(self class environment at: #EREventRecorderSettings ifAbsent: [ ^ self ])
+		class
+		removeSelector: #urlSettingsOn:
+		ifAbsent: [ ]
 	
 ]
 
