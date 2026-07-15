@@ -3,6 +3,6 @@
 ```Smalltalk
 Metacello new
     baseline: 'ExperimentModel';
-    repository: 'github://Pharo-XP-Tools/ExperimentModel:main';
+    repository: 'github://omarabedelkader/ExperimentModel:main';
     load.
 ```
