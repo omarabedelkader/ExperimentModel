@@ -66,7 +66,7 @@ AbstractExperiment >> removeERRecorderFromSettings [
 	EREventRecorderSettings class compile:'urlSettingsOn: aBuilder 
 
 	(aBuilder setting: #stringUrl)
-		parent: #Tools;
+		parentName: #Tools;
 		target: self;
 		description: ''The default URL for the Event Recorder server.'';
 		label: ''Event Recorder URL address''
